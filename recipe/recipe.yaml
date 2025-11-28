@@ -33,6 +33,7 @@ requirements:
   host:
     - openmpi-mpicc
     - zlib
+    - jansson
     
   run_exports:
     - ${{ pin_subpackage('libsc', upper_bound='x.x.x') }}
