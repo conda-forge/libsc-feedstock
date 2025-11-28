@@ -16,6 +16,7 @@ build:
   script:
     - if: unix
       then:
+        - pkg-config --debug jansson
         - cmake -B build $CMAKE_ARGS -DBUILD_SHARED_LIBS=ON -DSC_ENABLE_MPI=ON -DSC_HAVE_JSON=ON -DSC_USE_INTERNAL_JSON=OFF -DSC_BUILD_TESTING=ON
         - cmake --build build --parallel
         - cmake --install build
