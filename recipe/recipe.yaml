@@ -1,5 +1,5 @@
 context:
-  version: "2.8.7"
+  version: "2.8.8"
 
 package:
   name: libsc
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/cburstedde/libsc/releases/download/v${{ version }}/libsc-${{ version }}.tar.gz
-  sha256: 96028B7E16917E90DD319E9F7BBB231280FF3E74ECFE2A5480B5FF94AE1428CD
+  sha256: 9119e31890b77366f403710f34edc5af2dac1d7675f58565e0a79a5309699767
 
 build:
-  number: 1
+  number: 0
   skip:
     - win
   script:
@@ -34,7 +34,7 @@ requirements:
     - openmpi-mpicc
     - zlib
     - jansson
-    
+
   run_exports:
     - ${{ pin_subpackage('libsc', upper_bound='x.x.x') }}
 
